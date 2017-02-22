@@ -1315,7 +1315,9 @@ var PDFViewerApplication = {
 
 //#if GENERIC
 var HOSTED_VIEWER_ORIGINS = ['null',
-  'http://mozilla.github.io', 'https://mozilla.github.io'];
+  'http://dev.rise.tech', 'https://dev.rise.tech',
+  'http://app.rise.tech', 'https://app.rise.tech',
+  'http://localhost:12008', 'https://localhost:12008'];
 function validateFileURL(file) {
   try {
     var viewerOrigin = new URL(window.location.href).origin || 'null';
