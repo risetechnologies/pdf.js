@@ -1632,7 +1632,11 @@ if (typeof PDFJSDev === 'undefined' || PDFJSDev.test('GENERIC')) {
     }
 
     if (file) {
-      PDFViewerApplication.open(file);
+      let search = document.location.search;
+      const args = {
+        withCredentials: search.indexOf('withCredentials') > 0,
+      };
+      PDFViewerApplication.open(file, args);
     }
   };
 } else if (PDFJSDev.test('FIREFOX || MOZCENTRAL || CHROME')) {
