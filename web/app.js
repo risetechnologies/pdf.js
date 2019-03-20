@@ -1410,7 +1410,7 @@ let PDFViewerApplication = {
 let validateFileURL;
 if (typeof PDFJSDev === 'undefined' || PDFJSDev.test('GENERIC')) {
   const HOSTED_VIEWER_ORIGINS = ['null',
-    'http://mozilla.github.io', 'https://mozilla.github.io'];
+    'http://localhost:12008', 'https://localhost:12008'];
   validateFileURL = function validateFileURL(file) {
     if (file === undefined) {
       return;
